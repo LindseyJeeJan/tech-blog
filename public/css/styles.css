@@ -28,3 +28,14 @@ input::placeholder {
   color: var(--gray-dark);
 }
 
+.login .btn-link, nav button, nav a{
+  outline: none;
+  border: none;
+  background: transparent;
+  text-decoration: underline;
+  color: var(--cyan);
+}
+
+.card-header a{
+  cursor: pointer;
+}

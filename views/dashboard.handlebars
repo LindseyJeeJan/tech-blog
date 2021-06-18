@@ -1,42 +1,63 @@
 <div class="row">
     <div class="col-auto">
-        <h2>Welcome, {{username}}!</h2>
+        <h2 class="text-white">Welcome, {{username}}!</h2>
     </div>
 </div>
 
 <div class="row mt-4">
     <div class="col-md-6">
-        <h3>Create a New Post:</h3>
-
-        <form class="form new-post-form">
-            <div class="form-group">
-                <label for="post-title">Title:</label>
-                <input class="form-input" type="text" id="post-title" name="post-title" />
+        <div class="card bg-info mt-2">
+            <div class="card-header text-white">
+                Create a New Post
             </div>
-            <div class="form-group">
-                <label for="post-content">Content:</label>
-                <textarea class="form-input" id="post-content" name="post-content"></textarea>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary">Create</button>
-            </div>
-        </form>
-    </div>
-
-    {{#if posts.length}}
-    <div class="col-md-6 post-list">
-        {{#each posts as |post|}}
-        <div class="row mb-2">
-            <div class="col-md-8">
-                <h4><a href="/post/{{post.id}}">{{post.title}}</a></h4>
-            </div>
-            <div class="col-md-4">
-                <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
+            <div class="card-body bg-light">
+                <form class="form new-post-form">
+                    <div class="form-group">
+                        <label for="post-title">Title</label>
+                        <input class="form-input form-control" type="text" placeholder="Enter post title" id="post-title" name="post-title" />
+                    </div>
+                    <div class="form-group">
+                        <label for="post-content">Content</label>
+                        <textarea class="form-input form-control" placeholder="Enter post content" id="post-content" name="post-content"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-info">Add New Post</button>
+                    </div>
+                </form>
             </div>
         </div>
-        {{/each}}
-    </div>
-    {{/if}}
-</div>
 
-<script src="./js/dashboard.js"></script>
+        <div class="col-md-6 post-list">
+
+            {{#if posts.length}}
+            {{#each posts as |post|}}
+
+            <div class="card bg-info mt-2">
+                <div class="card-header text-white">
+                    <a href="/post/{{post.id}}">{{post.title}}</a>
+                </div>
+                <div class="card-body bg-light">
+                    <form class="form new-post-form">
+                        {{!-- <div class="form-group">
+                            <label for="post-title">Title</label>
+                            <input class="form-input form-control" type="text" placeholder="Enter post title" id="post-title" name="post-title" />
+                        </div>
+                        <div class="form-group">
+                            <label for="post-content">Content</label>
+                            <textarea class="form-input form-control" placeholder="Enter post content" id="post-content" name="post-content"></textarea>
+                        </div> --}}
+                        <div class="text-center">
+                            <button class="btn btn-sm btn-danger" data-id="{{post.id}}">Delete</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            {{/each}}
+            {{/if}}
+        </div>
+
+    </div>
+
+    <script src="./js/dashboard.js"></script>
