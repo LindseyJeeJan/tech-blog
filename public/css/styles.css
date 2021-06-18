@@ -1,0 +1,30 @@
+header a {
+    color: var(--cyan);
+}
+
+header a:hover {
+    color: var(--white);
+    cursor: pointer;
+}
+
+h1 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.login h2{
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 2.4;
+    border-bottom: 1px solid #666;
+}
+
+form label{
+  color: var(--gray);
+}
+
+input::placeholder {
+  color: var(--gray-dark);
+}
+

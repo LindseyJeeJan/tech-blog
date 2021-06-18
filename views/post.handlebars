@@ -1,10 +1,12 @@
-<div class="card">
-    <div class="card-header">
+<div class="card bg-info mt-2">
+    <div class="card-header text-white">
         {{title}}
     </div>
-    <div class="card-body">
+    <div class="card-body bg-light">
         <h5 class="card-title">{{content}}</h5>
-        <p class="card-text">Created by {{user.name}} on {{format_date date_created}}</p>
-        <a href="#" class="btn btn-primary">Update Post</a>
+        <div class="text-right">
+            <small class="card-text">Posted by {{user.username}} on {{format_date date_created}}</small>
+        </div>
+        <a href="#" class="btn btn-info">Update Post</a>
     </div>
 </div>
