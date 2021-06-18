@@ -5,10 +5,10 @@
 </div>
 
 <div class="row mt-4">
-    <div class="col-md-6">
+    <div class="col-md-12">
         <div class="card bg-info mt-2">
             <div class="card-header text-white">
-                Create a New Post
+                Create New Post
             </div>
             <div class="card-body bg-light">
                 <form class="form new-post-form">
@@ -27,37 +27,35 @@
             </div>
         </div>
 
-        <div class="col-md-6 post-list">
-
+        <div class="post-list">
             {{#if posts.length}}
             {{#each posts as |post|}}
-
             <div class="card bg-info mt-2">
                 <div class="card-header text-white">
-                    <a href="/post/{{post.id}}">{{post.title}}</a>
+                    {{!-- <a class="text-white" href="/post/{{post.id}}">{{post.title}}</a> --}}
+                    <a class="text-white">{{post.title}}</a>
                 </div>
-                <div class="card-body bg-light">
+                <div style="display: none;" class="card-body bg-light">
                     <form class="form new-post-form">
-                        {{!-- <div class="form-group">
+                        <div class="form-group">
                             <label for="post-title">Title</label>
-                            <input class="form-input form-control" type="text" placeholder="Enter post title" id="post-title" name="post-title" />
+                            <input class="form-input form-control" value="{{post.title}}" type="text" id="post-title" name="post-title" />
                         </div>
                         <div class="form-group">
                             <label for="post-content">Content</label>
-                            <textarea class="form-input form-control" placeholder="Enter post content" id="post-content" name="post-content"></textarea>
-                        </div> --}}
+                            <textarea class="form-input form-control" id="post-content" name="post-content">{{post.content}}</textarea>
+                        </div>
                         <div class="text-center">
-                            <button class="btn btn-sm btn-danger" data-id="{{post.id}}">Delete</button>
+                            <button id="btn-update" class="btn btn-sm btn-info" data-id="{{post.id}}">Update Post</button>
+                            <button id="btn-delete" class="btn btn-sm btn-info" data-id="{{post.id}}">Delete</button>
                         </div>
                     </form>
                 </div>
             </div>
-
-
             {{/each}}
             {{/if}}
         </div>
 
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./js/dashboard.js"></script>

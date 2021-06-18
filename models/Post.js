@@ -13,10 +13,10 @@ Post.init(
     },
     title: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     content: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     date_created: {
       type: DataTypes.DATE,
@@ -36,7 +36,7 @@ Post.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'post',
   }
 );
 
