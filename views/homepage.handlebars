@@ -1,25 +1,12 @@
 <!-- Loop over each object in the posts array -->
-{{#if logged_in}}
 {{#each posts as |post| }}
 <div class="card bg-info mt-2">
     <div class="card-header">
+        {{#if logged_in}}
         <a class="text-white" href="/post/{{post.id}}">{{post.title}}</a>
-    </div>
-    <div class="card-body bg-light">
-        <h5 class="card-title">{{post.content}}</h5>
-        <div class="text-right">
-            <small class="card-text">Posted by {{post.user.username}} on {{format_date post.date_created}}</small>
-        </div>
-    </div>
-</div>
-{{/each}}
-
-{{else}}
-
-{{#each posts as |post| }}
-<div class="card bg-info mt-2">
-    <div class="card-header">
+        {{else}}
         <span class="text-white">{{post.title}}</span>
+        {{/if}}
     </div>
     <div class="card-body bg-light">
         <h5 class="card-title">{{post.content}}</h5>
@@ -28,6 +15,15 @@
         </div>
     </div>
 </div>
+{{#each comments as |comment| }}
+<div class="card bg-info mt-2">
+    <div class="card-header"></div>
+    <div class="card-body bg-light">
+        <h5 class="card-title">{{comment.comment}}</h5>
+        <div>
+            <span class="card-text"> &ndash; {{comment.user.username}}, {{format_date post.date_created}}</span>
+        </div>
+    </div>
+</div>
 {{/each}}
-
-{{/if}}
+{{/each}}
