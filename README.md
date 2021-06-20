@@ -20,8 +20,8 @@
   Click on Login to sign up for an account or to login to an existing account. You will be redirected to your Dashboard where you may create a new post or edit an existing one. After logging in, you can post comments on the conversations on the homepage.
 
   :camera: !
-  [Homepage](blob/main/public/images/desktop.png)
-  [Login](blob/main/public/images/login.png)
+  [Homepage](main/public/images/desktop.png)
+  [Login](main/public/images/login.png)
 
   ## License
   Licensed under [MIT License](https://spdx.org/licenses/MIT.html).
