@@ -39,11 +39,11 @@
                     <form class="form new-post-form">
                         <div class="form-group">
                             <label for="post-title">Title</label>
-                            <input class="form-input form-control" value="{{post.title}}" type="text" id="post-title" name="post-title" />
+                            <input class="form-input form-control post-title" value="{{post.title}}" type="text" name="post-title" />
                         </div>
                         <div class="form-group">
                             <label for="post-content">Content</label>
-                            <textarea class="form-input form-control" id="post-content" name="post-content">{{post.content}}</textarea>
+                            <textarea class="form-input form-control post-content" name="post-content">{{post.content}}</textarea>
                         </div>
                         <div class="text-center">
                             <button id="btn-update" class="btn btn-sm btn-info" data-id="{{post.id}}">Update Post</button>

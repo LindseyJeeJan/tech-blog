@@ -38,10 +38,9 @@ const delButtonHandler = async (event) => {
 };
 
 const updateButtonHandler = async (event) => {
-  const title = document.querySelector('#post-title').value.trim();
-  const content = document.querySelector('#post-content').value.trim();
+  const title = $(event.target).closest('form').find('.post-title').val();
+  const content = $(event.target).closest('form').find('.post-content').val();
   const id = event.target.getAttribute('data-id');
-  console.log(id);
     if (title && content) {
     const response = await fetch(`/api/post/${id}`, {
       method: 'PUT',
@@ -52,7 +51,7 @@ const updateButtonHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/post/${id}');
+      document.location.replace('/dashboard');
     } else {
       alert('Failed to update post');
     }
