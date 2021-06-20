@@ -5,6 +5,7 @@ header a {
 header a:hover {
     color: var(--white);
     cursor: pointer;
+    text-decoration: none;
 }
 
 h1 {
@@ -13,19 +14,19 @@ h1 {
     line-height: 1;
 }
 
-.login h2{
-    font-size: 1.2rem;
-    font-weight: bold;
-    line-height: 2.4;
-    border-bottom: 1px solid #666;
-}
-
 form label{
   color: var(--gray);
 }
 
 input::placeholder {
   color: var(--gray-dark);
+}
+
+.login h2{
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 2.4;
+    border-bottom: 1px solid #666;
 }
 
 .login .btn-link, nav button, nav a{
@@ -38,4 +39,8 @@ input::placeholder {
 
 .card-header a{
   cursor: pointer;
+}
+
+a.underline, a.underline:hover{
+  text-decoration: underline;
 }
