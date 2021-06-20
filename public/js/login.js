@@ -42,7 +42,7 @@ const signupFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-      alert(response.statusText);
+      alert('The username and/or password are incorrect.');
     }
   }
 };
