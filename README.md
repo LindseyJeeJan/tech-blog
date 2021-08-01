@@ -19,9 +19,9 @@
   ## Usage
   Click on Login to sign up for an account or to login to an existing account. You will be redirected to your Dashboard where you may create a new post or edit an existing one. After logging in, you can post comments on the conversations on the homepage.
 
-  :camera: !
-  [Homepage](public/images/desktop.png)
-  [Login](public/images/login.png)
+  :camera: 
+  ![Homepage](public/images/desktop.png)
+  ![Login](public/images/login.png)
 
   ## License
   Licensed under [MIT License](https://spdx.org/licenses/MIT.html).
